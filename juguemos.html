@@ -9,48 +9,53 @@
 </head>
 <body>
     <nav>
-        <!--Imagen provisoria del Logo--> 
+        <!--Imagen del Logo y ancla--> 
         <a href="./index.html">
-            <img src="./imagenes/Logo_FV.png" alt="">   
-        </a>   
-            <ul class="menu">
-                <li class="item_menu">
-                    <a class="link_item" href="./historia.html">Historia</a></li>
-                <li class="item_menu">
-                    <a class="link_item" href="./juguemos.html">Juguemos</a></li>
-            </ul>
-        </nav>   
-        
+            <svg width="200" height="80">
+                <rect x="45" y="5" width="60" height="35" rx="5" id="rec1" fill="#3F6797" slot="5"></rect>
+                <rect x="50" y="10" width="50" height="25" rx="5" id="rec2" fill="#B1D5E4"></rect>
+                <polygon points="55 45 ,95 45,115 62,30 62" fill="#3F6797" id="pol1"></polygon>
+                <polygon points="57 48 ,92 48,104 58,43 58" fill="#B1D5E4" id="pol2"></polygon>
+            </svg>
+        </a>
+        <ul class="menu">
+            <li class="item_menu">
+                <a class="link_item" href="./historia.html">Historia</a></li>
+            <li class="item_menu">
+                <a class="link_item" href="./juguemos.html">Juguemos</a></li>
+        </ul>
+    </nav>   
+            
         <header>
             <h1 class="titulo">JUGUEMOS UN POCO</h1>
         </header>
 
     
     <main>
-
-        <div>
-            <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
-
+    <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
+    <section class="juego">
+        <div class="cajas">
+            <div id="cajasoltar">
+                <p>Arrastre y suelte la imágene aquí</p>
+            </div>
+            <div id="cajasoltar2">
+                <p>Arrastre y suelte la imágene aquí</p>
+            </div>
+            <div id="cajasoltar3">
+                <p>Arrastre y suelte la imágene aquí</p>
+            </div>
         </div>
-
-        <div>
-            
+        <div id="cajaimagenes">
+            <img id="imagen2" src="./imagenes/rompe2.png" alt="Imagen Rompecabezas 2">
+            <img id="imagen1" src="./imagenes/Rompe1.png" alt="Imagen Rompecabezas 1">
+            <img id="imagen3" src="./imagenes/Rompe3.png" alt="Imagen Rompecabezas 3">
         </div>
+    </section>
+
+    <button onclick="reiniciar()" class="botonesVideo reinicio">Reiniciar</button>
 
     </main>
  
-
-    <footer>
-        <div>
-            <img src="./imagenes/logo.svg" alt="">
-        </div>
-        <div>
-            <p>PROGRAMACION E HISTORIA</p>
-        </div>
-        <div>
-            <p>Sitio con fines educativos - Creado por Morales Ignacio</p>
-        </div>        
-    </footer>
-    <script src="./js/script.js"></script>    
+   <script src="./js/script.js"></script>    
 </body>
 </html>

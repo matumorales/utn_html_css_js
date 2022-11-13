@@ -7,8 +7,11 @@
 /******************/
 
 *{
-    background-color: #427E80;
     font-family: 'Montserrat', sans-serif; 
+}
+
+body{
+    background-color: #427E80; 
 }
 
 header{
@@ -39,6 +42,7 @@ nav{
  display: flex;
  justify-content: space-between;
  align-items: center;
+ margin: 0px 40px;
 }
 
 .menu{
@@ -69,6 +73,54 @@ nav{
        box-shadow:0px 0px ;
    }
      
+/***********************/
+/*    Logo con SVG     */
+/***********************/
+rect#rec1, polygon#pol1 {
+    animation: anima1 ease-in 5s;
+    animation-iteration-count:1;
+}
+    
+rect#rec2,polygon#pol2 {
+    animation: anima2 ease-in 5s;
+    animation-iteration-count:1;
+}
+
+@keyframes anima1 {
+    0% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    20% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    30% {
+    transform: translate(0,0);
+    opacity:1;}
+    90% {
+    transform: translate(0,0);
+    opacity:1;}    
+    100% {
+    transform: translate(0,0);
+    opacity:1;}
+}   
+    
+@keyframes anima2 {
+    0% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    30% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    40% {
+    transform: translate(0,0);
+    opacity:1;}
+    90% {
+    transform: translate(0,0);
+    opacity:1;}
+    100% {
+    transform:translate(0,0);
+    opacity:1;}
+}  
 
 /*************************/
 /*         index         */
@@ -147,7 +199,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
+    padding: 0px 40px;
     color: white;
 }
 
@@ -157,12 +209,16 @@ footer{
     text-align: center;
     align-self: flex-start;
     background-color: #1d1d1d;
+    justify-content: space-between;
+    width:300px;
+    height: 60px;
 }
 
 .txt_footer{
-    font-size: 16px;
-    color: white;
+    font-size: 12px;
     background-color: #1d1d1d;
+    color: white;
+    justify-content: space-between;    
 }
 
 
@@ -172,7 +228,7 @@ footer{
 .main_historia{
     padding: 90px 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
 }
@@ -186,5 +242,47 @@ footer{
     background-color: linear-gradient(10% #F0F5E4,#154454 100%);    
 }
 .txt_historia{
-    width: 40%;
+    width: 50%;
+}
+
+.img_txt_footer{
+    padding: 10px 5px 0px 0px;
+}
+
+/*************************/
+/*       Juguemos        */
+/*************************/
+.juego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cajas{
+    display: flex;
+    flex-direction: row;
+}
+#cajasoltar,#cajasoltar2,#cajasoltar3{
+    width: 275px;
+    height: 400px;
+    display: inline-block;
+    border: 2px solid black;
+    background-color: grey;
+    text-align: center;
+
+}
+
+#cajaimagenes{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 40px;
+}
+#imagen1,#imagen2,#imagen3{
+    width: 275px;
+    height: 400px;
+}
+.reinicio{
+    display: flex;
+    margin: auto;
+    padding: 10px 100px;
 }
